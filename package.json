@@ -1,0 +1,27 @@
+{
+  "name": "gbr-group",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalyOne/GBR-Group.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SalyOne/GBR-Group/issues"
+  },
+  "homepage": "https://github.com/SalyOne/GBR-Group#readme",
+  "dependencies": {
+    "laravel-mix": "^6.0.43"
+  },
+  "devDependencies": {
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.1.0"
+  }
+}
