@@ -1,0 +1,58 @@
+.main-banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    .main-slider{ 
+        width: 100%;
+        height: 100%;
+        .glide-slide{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .image-container{
+                position: relative;
+                width: 100%;
+                height: 100vh;   
+                img{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                }  
+            }
+            .text-conatiner{
+                position: absolute;
+                right: 100px;
+                bottom: 100px; 
+                z-index: 3;
+                @include family(title);
+                z-index: 1;
+                text-align: right;
+
+                h2{
+                    @include fs($title); 
+                    text-transform: uppercase;
+                    color:#fff;
+                }
+                p{
+                    @include fs($text);
+                    color:#fff;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .transparent-background{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        pointer-events: none;
+        
+        z-index: 1;
+        background-color: rgba(51,78,76,0.6);//#336666 --  334e4c
+        clip-path: polygon(92% 0, 0 0, 0 100%, 100% 100%, 100% 50%, 100% 0, 48% 26%, 71% 51%, 48% 77%, 25% 52%, 48% 26%, 100% 0);
+        
+    }
+}

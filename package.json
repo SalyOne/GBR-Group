@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SalyOne/GBR-Group#readme",
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "laravel-mix": "^6.0.43"
   },
   "devDependencies": {
