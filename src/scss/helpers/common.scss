@@ -1,0 +1,47 @@
+
+.container-def{
+    width: 85%;
+    margin: 0 auto;
+}
+.container-small{
+    width:71%;
+    margin: 0 auto;
+    @include mq(tablet){
+        width: 85%;
+    }
+}
+.container-xs{
+    width:65%;
+    margin: 0 auto;
+    @include mq(tablet){
+        width: 85% ;
+    }
+
+}
+.section-common{
+    padding: 40px 0;
+}
+.section-header{
+    display: flex;
+    align-items: center;
+    .title-tab{
+        background-color: $gr-dark;
+
+        width: 325px;
+        height: 60px;
+        display: inline-block;
+        
+        clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
+    }
+    .header-title{
+        @include family(title);
+        @include fs($header);
+        color: $gray;
+        text-transform: uppercase   ;
+
+        a{
+            text-decoration: none;
+            color: $gray;
+        }
+    }
+}

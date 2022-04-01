@@ -3,20 +3,30 @@ $arial: 'BPG Arial Caps';
 $glaho: 'BPG Glaho';
 $optima: 'Optima';
 
-$en-title: $optima;
+$signika:"Signika";
+$arimo:"Arimo";
+
+$en-title: $signika;
 //$en-title-text : $web;
-$en-text : $glaho;
+$en-text : $arimo;
 
-$ru-title: $optima;
-$ru-text : $glaho;
+$ru-title: $signika;
+$ru-text : $arimo;
 
-$ge-title: $arial;
+$ge-title: $signika;
 //$ge-title-text : $web;
-$ge-text : $glaho;
+$ge-text : $arimo;
 
 $default-title: $en-title;
 //$default-title-text: $ge-title-text;
 $default-text: $en-text;
 
 $title:50px;
+$header:25px;
 $text:25px;
+
+
+//colors    
+$gray: rgb(66,66,66);
+$green:#336666;
+$gr-dark: #334E4C;
