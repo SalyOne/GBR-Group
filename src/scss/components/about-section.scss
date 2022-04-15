@@ -1,11 +1,107 @@
 .about-section{
-    
     .text-container{
         color: $gray;
         padding: 40px 0;
-        font-family: 'Signika';
+        @include family(text);
+        @include fs(18px);
         .text-highlight{
-            color: $green;  
+            color: $gr-dark;
+            @include family(title);
+            @include fs(25px);
+            text-align: center;
+            display: block;
+            font-weight: bold;
+            padding: 15px 0;
         }
     }
+    .button-container{
+        text-align: center;
+    }
+}
+.geography-section{
+    height: max(600px, 60vh);
+    .geography-svg-container{
+        overflow: hidden;
+        height: calc(100% - 80px );
+        svg{
+            width: 100%;
+        }
+    }
+    .button-container{
+        text-align: center;
+    }
+}
+
+.application-section{
+    background-color: $beage;
+
+    .section-header{
+        padding: 80px 0;
+    }
+    .application-info{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0 ;
+        padding-bottom: 80px;
+        gap: 30px;
+        .side{
+            flex: 1 2 0;
+            position: relative;
+            overflow: hidden;
+            .image-container{
+                img{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                &:after{
+                    content: "";
+                    background-color: rgba(white, 0.4);
+                    width: 100%;
+                    height: 100%;
+                    z-index: 4;
+                    position: relative;
+                    display: inline-block;
+                }
+            }
+        }
+        .center{
+            flex: 2 2 0;
+            background-color: white;
+            border: 1px solid $bluish-gray;
+            padding: 50px 60px;
+            text-align: center;
+            .title{
+                text-transform: uppercase;
+                @include family(title);
+                @include fs($header);
+                padding-bottom: 30px;
+                color: $bluish-gray;
+            }
+            .button{
+                padding: 15px 20px;
+                @include fs(18px);
+                font-weight: bold;
+            }
+            .text-highlight{
+                color: $gr-dark;
+                @include family(title);
+                @include fs(25px);
+                text-align: center;
+                display: block;
+                font-weight: bold;
+                padding: 20px 0;
+            }
+            .text-container{
+                @include family(title);
+                @include fs(16px);
+                color: $bluish-gray;
+            }
+        }
+    }
+}
+.contact-section{
+    background-color: $beage;
 }

@@ -1,10 +1,12 @@
 
 .container-def{
     width: 85%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .container-small{
     width:71%;
+    max-width: 1100px;
     margin: 0 auto;
     @include mq(tablet){
         width: 85%;
@@ -12,6 +14,7 @@
 }
 .container-xs{
     width:65%;
+    max-width: 900px;
     margin: 0 auto;
     @include mq(tablet){
         width: 85% ;
@@ -30,18 +33,151 @@
         width: 325px;
         height: 60px;
         display: inline-block;
-        
-        clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
+
+
+        clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
     }
     .header-title{
         @include family(title);
         @include fs($header);
         color: $gray;
-        text-transform: uppercase   ;
+        text-transform: uppercase;
+        font-weight: bold;
 
         a{
             text-decoration: none;
             color: $gray;
         }
     }
+    &.top{
+        .title-tab {
+            clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+        }
+    }
+    &.right-side{
+        display: flex;
+        justify-content: flex-end;
+        .title-tab{
+            order: 2;
+            background-color: $gr-dark;
+    
+            width: 325px;
+            height: 60px;
+            display: inline-block;
+            
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 40% 100%);
+        }
+    }
+}
+.button{
+    &-def{
+        background-color: rgba(white,0.7);
+        text-transform: capitalize;
+        @include family(title);
+        @include fs(18px);
+        text-decoration: none;
+        color: $gray;
+        padding: 5px 15px;
+        position: relative;
+        transition: 0.5s;
+        transition-delay: 0.2s;
+        display: inline-flex;
+        align-self: center;
+
+        &::after,
+        span::before ,
+        &::before,
+        span::after{
+            content: '';
+            position: absolute;
+            background: transparent;
+            transition: 0.5s;
+
+        }
+        &::after,
+        span::before {
+            width: 60%;
+            height: 30%;
+        }
+        &::before,
+        span::after {
+            width: 30%;
+            height: 60%;
+        }
+        
+        &::before {
+            top: -2px;
+            left: -2px;
+            border-top: 2px solid $bluish-gray;
+            border-left: 2px solid $bluish-gray;
+        }
+        &::after {
+            top: -1px;
+            right: -1px;
+            border-top: 1px solid $bluish-gray;
+            border-right: 1px solid $bluish-gray;
+        }
+        
+        span::before {
+            bottom: -1px;
+            left: -1px;
+            border-bottom: 1px solid $bluish-gray;
+            border-left: 1px solid $bluish-gray;
+        }
+        span::after {
+            bottom: -2px;
+            right: -2px;
+            border-bottom: 2px solid $bluish-gray;
+            border-right: 2px solid $bluish-gray;
+        }
+        
+        
+        &:hover::before,
+        &:hover::after,
+        &:hover span::before,
+        &:hover span::after  {
+            width: 50%;
+            height: 50%;
+            border-color: transparent;
+        }
+        &:hover{
+            // border: 0;
+            background-color: $teracot;
+            color: white;
+        }
+    }
+}
+.middle-east{
+    path{
+        
+    fill: red!important;
+    }
+}
+.central-asia{
+    path{
+        
+    fill: green!important;
+    }
+}
+.europe{
+    path{
+        
+    fill: blue!important;
+    }
+}
+.caucasus{
+    text-align: center;
+    color: cadetblue;
+    fill: red;
+    position: relative;
+    display: inline-block;
+    path{
+        
+    fill: yellowgreen!important;
+    }
+}
+.ccac{
+    font-size: 30px;
+    fill: black;
+    transform: translate(23%,56%);
 }

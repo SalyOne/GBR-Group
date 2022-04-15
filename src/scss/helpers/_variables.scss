@@ -6,27 +6,31 @@ $optima: 'Optima';
 $signika:"Signika";
 $arimo:"Arimo";
 
-$en-title: $signika;
+$en-title: $arimo;
 //$en-title-text : $web;
-$en-text : $arimo;
+$en-text : $signika;
 
-$ru-title: $signika;
-$ru-text : $arimo;
+$ru-title: $arimo;
+$ru-text : $signika;
 
-$ge-title: $signika;
+$ge-title: $arimo;
 //$ge-title-text : $web;
-$ge-text : $arimo;
+$ge-text : $signika;
 
 $default-title: $en-title;
 //$default-title-text: $ge-title-text;
 $default-text: $en-text;
 
 $title:50px;
-$header:25px;
+$header:30px;
 $text:25px;
+$small:18px;
 
 
 //colors    
 $gray: rgb(66,66,66);
 $green:#336666;
 $gr-dark: #334E4C;
+$teracot:#9F3E23;
+$bluish-gray:#424242;
+$beage:#F1EEE3;
