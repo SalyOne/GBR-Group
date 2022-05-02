@@ -79,8 +79,8 @@
         color: $gray;
         padding: 5px 15px;
         position: relative;
-        transition: 0.5s;
-        transition-delay: 0.2s;
+        transition: 0.3s;
+        transition-delay: 0.1s;
         display: inline-flex;
         align-self: center;
 
@@ -91,7 +91,7 @@
             content: '';
             position: absolute;
             background: transparent;
-            transition: 0.5s;
+            transition: 0.3s;
 
         }
         &::after,

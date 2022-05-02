@@ -104,4 +104,70 @@
 }
 .contact-section{
     background-color: $beage;
+    position: relative;
+    .contact-info-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 330px;
+        margin: 50px 0 100px 0;
+        .map{
+            position: absolute;
+            width: 100%;
+            height: 330px;
+            z-index: 0;
+            .overlay{
+                background-color: rgba(255,255,255,0.7);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .title{
+            position: relative;
+            z-index: 1;
+            color: $bluish-gray;
+            text-transform: uppercase;
+            @include family(title);
+            @include fs(35px);
+            font-weight: bold;
+        }
+        .info-row{
+            position: relative;
+            ul{
+                display: flex;
+                gap: 30px;
+                padding: 40px 0;
+                list-style-type: none;
+            }
+            .info-title{
+                text-transform: uppercase;
+                color: $gr-dark;
+                display: block;
+                letter-spacing: 3px;
+                @include family(title);
+                @include fs(16px);
+                font-weight: bold;
+            }
+            .info{
+                @include family(text);
+                @include fs(16px);
+                letter-spacing: 2px;
+                color: $bluish-gray;
+                text-decoration: none;
+
+            }
+        }
+        .button-container{
+            .button{
+                padding: 15px 25px;
+                font-weight: bold;
+            }
+        }
+    }
 }
