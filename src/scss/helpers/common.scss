@@ -21,6 +21,7 @@
     }
 
 }
+
 .section-common{
     padding: 40px 0;
 }
@@ -36,6 +37,10 @@
 
 
         clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+
+        @include mq(tablet-small){
+            width: 125px;
+        }
     }
     .header-title{
         @include family(title);
@@ -47,6 +52,13 @@
         a{
             text-decoration: none;
             color: $gray;
+        }
+        @include mq(tablet-medium){
+            @include fs(25px);
+
+        }
+        @include mq(tablet-small){
+            @include fs(20px);
         }
     }
     &.top{
@@ -66,9 +78,13 @@
             display: inline-block;
             
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 40% 100%);
+            @include mq(tablet-small){
+                width: 125px;
+            }
         }
     }
 }
+
 .button{
     &-def{
         background-color: rgba(white,0.7);

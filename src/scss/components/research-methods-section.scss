@@ -5,36 +5,43 @@
         display: flex;
         justify-content: space-between;
         gap:50px;
-    }
-    .each-side{
-        width: 50%;
-        height: 330px;
-        background-color: white;
+        .each-side{
+            width: 50%;
+            height: 330px;
+            background-color: white;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        position: relative;
-        .image-container{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        .text-overlay{
             display: flex;
             align-items: center;
             justify-content: center;
 
-            width: 100%;
-            height: 100%;
             position: relative;
-            background-color: rgba($gr-dark,0.6);
+            .image-container{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .text-overlay{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 100%;
+                height: 100%;
+                position: relative;
+                background-color: rgba($gr-dark,0.6);
+            }
+
+            @include mq(tablet-medium){
+                width: 100%;
+            }
+        }
+        @include mq(tablet-medium){
+            flex-direction: column;
         }
     }
 }
