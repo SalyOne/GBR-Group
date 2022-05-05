@@ -24,6 +24,9 @@
 
 .section-common{
     padding: 40px 0;
+    @include mq(desktop-small){
+        padding: 20px 0;
+    }
 }
 .section-header{
     display: flex;
@@ -163,37 +166,67 @@
         }
     }
 }
-.middle-east{
-    path{
-        
-    fill: red!important;
-    }
+//.middle-east{
+//    path{
+//
+//    fill: red!important;
+//    }
+//}
+//.central-asia{
+//    path{
+//
+//    fill: green!important;
+//    }
+//}
+//.europe{
+//    path{
+//
+//        fill: blue!important;
+//    }
+//}
+//.caucasus{
+//    text-align: center;
+//    color: cadetblue;
+//    fill: red;
+//    position: relative;
+//    display: inline-block;
+//    path{
+//
+//    fill: yellowgreen!important;
+//    }
+//}
+.map-text{
+   @include fs(20px);
+    @include family(title);
+    @include family(text);
+    font-weight: bold;
+    fill: $bluish-gray;
+    text-transform: capitalize;
+    z-index: 999999;
+    display: block;
 }
-.central-asia{
-    path{
-        
-    fill: green!important;
-    }
-}
-.europe{
-    path{
-        
-    fill: blue!important;
-    }
-}
-.caucasus{
-    text-align: center;
-    color: cadetblue;
-    fill: red;
-    position: relative;
-    display: inline-block;
-    path{
-        
-    fill: yellowgreen!important;
-    }
-}
-.ccac{
-    font-size: 30px;
-    fill: black;
+.caucasus-text{
     transform: translate(23%,56%);
+}
+.europe-text{
+    transform: translate(10%,46%);
+}
+.central-asia-text{
+    transform: translate(40%,53%);
+}
+.middle-east-text{
+    transform: translate(17%,71%);
+
+}
+.continent{
+    path{
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    &:hover{
+        path{
+            fill: $teracot!important;
+
+        }
+    }
 }

@@ -12,19 +12,19 @@
             font-family: $ge-title, sans-serif;
         }
     }
-    @if($name == "title-text"){
-        font-family: $default-title-text, sans-serif;
-
-        &:lang(en){
-            font-family: $en-title-text, sans-serif;
-        }
-        &:lang(ru){
-            font-family: $ru-title-text, sans-serif;
-        }
-        &:lang(ka),&:lang(ge){
-            font-family: $ge-title-text, sans-serif;
-        }
-    }
+    //@if($name == "title-text"){
+    //    font-family: $default-title-text, sans-serif;
+    //
+    //    &:lang(en){
+    //        font-family: $en-title-text, sans-serif;
+    //    }
+    //    &:lang(ru){
+    //        font-family: $ru-title-text, sans-serif;
+    //    }
+    //    &:lang(ka),&:lang(ge){
+    //        font-family: $ge-title-text, sans-serif;
+    //    }
+    //}
     @if($name == "text"){
         font-family: $default-text, sans-serif;
 

@@ -42,6 +42,8 @@
         }
         @include mq(tablet-medium){
             flex-direction: column;
+            gap:30px;
+            padding: 30px 0;
         }
     }
 }
