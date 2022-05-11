@@ -166,6 +166,8 @@
         }
     }
 }
+
+
 //.middle-east{
 //    path{
 //
@@ -220,13 +222,14 @@
 }
 .continent{
     path{
-        cursor: pointer;
+        //cursor: pointer;
         transition: 0.2s;
+        opacity: 0.3;
     }
-    &:hover{
-        path{
-            fill: $teracot!important;
-
-        }
-    }
+    //&:hover{
+    //    path{
+    //        fill: $teracot!important;
+    //
+    //    }
+    //}
 }

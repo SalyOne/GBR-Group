@@ -1,13 +1,15 @@
+
 @import "helpers/reset.scss";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
 @import "helpers/fonts.scss";
+
 @import "helpers/_mixins.scss";
 @import "helpers/_variables.scss";
 
 
 @import "helpers/common.scss";
 @import "components/sliders.scss";
+@import "components/header.scss";
 
 @import "components/about-section.scss";
 

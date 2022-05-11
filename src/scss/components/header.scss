@@ -1,0 +1,31 @@
+
+.main-header{
+  background-color: rgba($gr-dark,0.8);
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+  padding: 20px 0;
+  &>.container-def{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav{
+    ul{
+      display: flex;
+      list-style-type: none;
+      gap: 30px;
+      li{
+          color: white;
+        @include fs(18px);
+        @include family(text);
+        text-transform: capitalize;
+        a{
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}
