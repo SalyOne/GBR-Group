@@ -4,28 +4,135 @@
   width: 100%;
   position: fixed;
   z-index: 9;
-  padding: 20px 0;
   &>.container-def{
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  .image-container{
+
+  }
   nav{
-    ul{
+    &>ul{
       display: flex;
       list-style-type: none;
       gap: 30px;
-      li{
-          color: white;
+      &>li{
+        color: white;
         @include fs(18px);
         @include family(text);
         text-transform: capitalize;
+        transition: 0.2s;
+        cursor: pointer;
+        padding: 30px 0;
         a{
           color: white;
           text-decoration: none;
+          transition: 0.2s;
+          &:hover{
+            color: $teracot;
+          }
+        }
+        svg{
+          transition: 0.2s;
         }
       }
     }
+  }
+  .right-side{
+    display: flex;
+    gap: 60px;
+    .search-icon{
+      padding: 30px 0;
+      width: 20px;
+      svg {
+        fill:white;
+        transition: 0.2s;
+        &:hover{
+          fill: $teracot;
+      }
+      }
+    }
+    .lang-container{
+      padding: 30px 0;
+      color: white;
+      @include fs(18px);
+      @include family(text);
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: 0.2s;
+      svg{
+        transition: 0.2s;
 
+      }
+      &:hover{
+        color: $teracot;
+      }
+      .dropdown-header{
+      }
+    }
+  }
+}
+
+.dropdown-container{
+  position: relative;
+
+  &:hover{
+    color: $teracot;
+    svg{
+      transform: rotate(180deg);
+      path{
+        stroke:$teracot;
+      }
+    }
+    .dropdown-body{
+      animation: revial 0.5s forwards;
+    }
+  }
+  .dropdown-body{
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    background-color: rgba($gr-dark,0.8);
+    width: 200px;
+    border-radius: 3px;
+    transition: 0.3s;
+    ul{
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      gap: 15px;
+      li{
+        color: white;
+        @include fs(18px);
+        @include family(text);
+        text-transform: capitalize;
+        transition: 0.2s;
+        cursor: pointer;
+        a{
+          color: white;
+          text-decoration: none;
+          transition: 0.2s;
+          &:hover{
+            color: $teracot;
+          }
+        }
+        svg{
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+
+}
+
+@keyframes revial {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 600px;
   }
 }
