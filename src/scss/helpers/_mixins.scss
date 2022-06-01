@@ -1,3 +1,4 @@
+@use "../helpers/_variables.scss" as *;
 @mixin family($name) {
     @if($name == "title"){
         font-family: $default-title, sans-serif;

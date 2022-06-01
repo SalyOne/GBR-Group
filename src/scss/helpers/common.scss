@@ -1,3 +1,4 @@
+@use "../helpers" as *;
 
 .container-def{
     width: 85%;
@@ -200,7 +201,6 @@
 .map-text{
    @include fs(20px);
     @include family(title);
-    @include family(text);
     font-weight: bold;
     fill: $bluish-gray;
     text-transform: capitalize;
@@ -232,4 +232,11 @@
     //
     //    }
     //}
+}
+.page-title{
+    text-align: center;
+    color: $bluish-gray;
+    text-transform: uppercase;
+    @include fs(30px);
+    @include family(title);
 }
