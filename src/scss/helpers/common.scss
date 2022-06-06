@@ -218,20 +218,14 @@
 }
 .middle-east-text{
     transform: translate(17%,71%);
-
 }
-.continent{
+.section-common .continent{
     path{
         //cursor: pointer;
         transition: 0.2s;
         opacity: 0.3;
     }
-    //&:hover{
-    //    path{
-    //        fill: $teracot!important;
-    //
-    //    }
-    //}
+
 }
 .page-title{
     text-align: center;
