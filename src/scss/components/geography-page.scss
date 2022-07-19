@@ -1,9 +1,6 @@
 @use "../helpers" as *;
 
 .geography-page{
-  background-color: $beage;
-  padding-top: 87px;
-  min-height: calc(100vh - 106px);
 
   &:before,
   &:after{
@@ -51,7 +48,8 @@
     }
   }
   .popup-background{
-    position: absolute;
+    //position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -60,28 +58,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #2a7e75;
+    .map-section-container{
+      position: relative;
+    }
+    .country-list-container{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .title{
+        color: $bluish-gray;
+        @include family(title);
+        @include fs(24px);
+        text-transform: capitalize;
+        .prefix{
+          @include fs(18px);
+        }
+      }
+      .country-list{
+        list-style-type: none;
+        text-transform: capitalize;
+        @include family(title);
+        @include fs(24px);
 
-  }
-  .country-list-container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 auto;
-    .title{
-      color: $bluish-gray;
-      @include family(title);
-      @include fs(24px);
-      text-transform: capitalize;
-      .prefix{
-        @include fs(18px);
       }
     }
-    .country-list{
-      list-style-type: none;
-      text-transform: capitalize;
-      @include family(title);
-      @include fs(24px);
 
-    }
+
   }
 }

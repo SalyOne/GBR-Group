@@ -32,18 +32,14 @@
 .section-header{
     display: flex;
     align-items: center;
-    .title-tab{
-        background-color: $gr-dark;
-
-        width: 325px;
-        height: 60px;
-        display: inline-block;
-
-
-        clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
-
-        @include mq(tablet-small){
-            width: 125px;
+    &.right-side-title{
+        display: flex;
+        justify-content: flex-end;
+        .side-tab{
+            order: 2;
+            @include mq(tablet-small){
+                width: 125px;
+            }
         }
     }
     .header-title{
@@ -65,30 +61,61 @@
             @include fs(20px);
         }
     }
-    &.top{
-        .title-tab {
-            clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+}
+.right-side-tab{
+    display: flex;
+    justify-content: flex-end;
+}
+.side-tab{
+    background-color: $gr-dark;
+
+    width: 325px;
+    height: 60px;
+    display: inline-flex;
+
+
+
+    @include mq(tablet-small){
+        width: 125px;
+    }
+    &.bottom-right-corner{
+        clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+    }
+    &.top-left-corner{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 40% 100%);
+    }
+    &.top-right-corner{
+        clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+    }
+    &.bottom-left-corner{
+        clip-path: polygon(40% 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    &.short-tab{
+        //left site
+        &.bottom-left-corner{
+            width: 10%;
+            clip-path: polygon(60px 0, 100% 0%, 100% 100%, 0 100%);
+        }
+        //right side
+        &.top-right-corner{
+            width: 20%;
+            clip-path: polygon(0 0, 100% 0%, calc(100% - 60px) 100%, 0% 100%);
         }
     }
-    &.right-side{
-        display: flex;
-        justify-content: flex-end;
-        .title-tab{
-            order: 2;
-            background-color: $gr-dark;
-    
-            width: 325px;
-            height: 60px;
-            display: inline-block;
-            
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 40% 100%);
-            @include mq(tablet-small){
-                width: 125px;
-            }
+    &.long-tab{
+        //right site
+        &.top-right-corner{
+            width: 90%;
+            clip-path: polygon(0 0, 100% 0%, calc(100% - 60px) 100%, 0% 100%);
+        }
+        //left side
+        &.top-left-corner{
+            width: calc(80% + 60px);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 60px 100%);
         }
     }
 }
-
 .button{
     &-def{
         background-color: rgba(white,0.7);
@@ -227,10 +254,16 @@
     }
 
 }
+.each-page{
+    background-color: $beage;
+    padding-top: 87px;
+    min-height: calc(100vh - 106px);
+}
 .page-title{
     text-align: center;
     color: $bluish-gray;
     text-transform: uppercase;
-    @include fs(30px);
+    @include fs(28px);
     @include family(title);
+    padding-top: 40px;
 }
