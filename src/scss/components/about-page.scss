@@ -31,8 +31,11 @@
       clip-path: polygon(0 0, 100% 0%, 10% 100%, 0% 100%);
       overflow: hidden;
       flex: 1 1 0;
-
-      img{
+      .overlay{
+        background-color: rgba($gr-dark,0.3);
+        z-index: 1;
+      }
+      .overlay,  img{
         position: absolute;
         top: 0;
         left: 0;
@@ -79,6 +82,60 @@
         .big-part{
           width: 100%;
         }
+      }
+    }
+  }
+  .goals-and-missions-section{
+    position: relative;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .goals-and-missions-container{
+      display: flex;
+      margin: auto;
+      &>div{
+        flex: 1 1 0;
+      }
+      .title{
+        text-transform: uppercase;
+        @include family(title);
+        @include fs($header);
+        padding-bottom: 30px;
+        color: black;
+        font-weight: bold;
+      }
+      .text-container{
+        @include family(text);
+        @include fs(16px);
+        color: $gray;
+        line-height: 30px;
+        font-weight: bold;
+        ul{
+
+          li{
+            padding: 5px 0;
+            &::marker{
+              font-size: 30px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .image-container{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      pointer-events: none;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
