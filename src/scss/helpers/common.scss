@@ -70,7 +70,7 @@
     background-color: $gr-dark;
 
     width: 325px;
-    height: 60px;
+    height: $tab-height;
     display: inline-flex;
 
 
@@ -79,40 +79,40 @@
         width: 125px;
     }
     &.bottom-right-corner{
-        clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 50% 0%, 100% 100%, 0% 100%);
     }
     &.top-left-corner{
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 40% 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
     }
     &.top-right-corner{
-        clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
     }
     &.bottom-left-corner{
-        clip-path: polygon(40% 0, 100% 0%, 100% 100%, 0 100%);
+        clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0 100%);
     }
 
     &.short-tab{
         //left site
         &.bottom-left-corner{
             width: 10%;
-            clip-path: polygon(60px 0, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(calc(#{$tab-height} + 20px) 0, 100% 0%, 100% 100%, 0 100%);
         }
         //right side
         &.top-right-corner{
             width: 20%;
-            clip-path: polygon(0 0, 100% 0%, calc(100% - 60px) 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, calc(100% - #{$tab-height} - 20px) 100%, 0% 100%);
         }
     }
     &.long-tab{
+        //left side
+        &.top-left-corner{
+            width: calc(80% + #{$tab-height} + 20px);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, calc(#{$tab-height} + 20px) 100%);
+        }
         //right site
         &.top-right-corner{
             width: 90%;
-            clip-path: polygon(0 0, 100% 0%, calc(100% - 60px) 100%, 0% 100%);
-        }
-        //left side
-        &.top-left-corner{
-            width: calc(80% + 60px);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 60px 100%);
+            clip-path: polygon(0 0, 100% 0%, calc(100% - #{$tab-height} - 20px) 100%, 0% 100%);
         }
     }
 }
