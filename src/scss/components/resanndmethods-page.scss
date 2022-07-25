@@ -1,0 +1,123 @@
+@use "../helpers" as *;
+
+.research-methods-page{
+    display: grid;
+    grid-template-columns: 6fr 2fr 3fr 4fr 2fr 4fr 3fr 6fr 2fr 3fr;
+    grid-template-rows: auto auto 15px auto auto;
+    .page-title{
+      grid-column: 1/span 10;
+    }
+    .research-container{
+      grid-column: 2/7;
+      padding-top: 60px;
+      padding-right: 70px;
+      &.left-side-research{
+        grid-row: 2 / 6;
+        grid-column: 2/7;
+      }
+      &.right-side-research{
+        grid-row: 6 / 13;
+        grid-column: 6/span 5;
+      }
+      .title{
+        @include family(title);
+        @include fs(25px);
+        text-transform: uppercase;
+        color: $gray;
+        font-weight: bold;
+        padding-bottom: 20px;
+      }
+      .text-container{
+        @include family(text);
+        @include fs(16px);
+        color: $gray;
+        p{
+          padding-bottom: 20px;
+        }
+      }
+    }
+  .image-collection-container{
+    //display: grid;
+    //grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    //grid-template-rows: auto 80px ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.right-side-image{
+      grid-column: 7/span 4;
+      grid-row:2/6;
+      .image-tab{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 60px 100%);
+      }
+
+    }
+    &.left-side-image{
+      grid-column: 1/span 4;
+      grid-row:7/12;
+      .image-tab{
+        clip-path: polygon(0 0, 100% 0%, calc(100% - 60px) 100%, 0% 100%);
+      }
+    }
+    .image-container{
+      position: relative;
+      img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 909;
+        pointer-events: none;
+      }
+      &:nth-child(1){
+        //grid-column: 1/span 5;
+        //grid-row: 4/ 2;
+        width: 35%;
+        height: 0;
+        padding-bottom: 50%;
+        .overlay{
+          background-color: rgba($gr-dark,0.2);
+        }
+
+      }
+      &:nth-child(2){
+        width: 40%;
+        height: 0;
+        padding-bottom: 50%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .overlay{
+          background-color: rgba($overlay-yellow,0.2);
+        }
+      }
+      &:nth-child(3){
+        grid-column: 7/span 4;
+        width: 70%;
+        height: 0;
+        padding-bottom: 40%;
+        margin-right: auto;
+        .overlay{
+          background-color: rgba($teracot,0.2);
+        }
+      }
+    }
+    .image-tab{
+      width: 100%;
+      height: 30px;
+      background-color: $gr-dark;
+
+    }
+  }
+
+}
