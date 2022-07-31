@@ -1,0 +1,105 @@
+@use "../helpers" as *;
+.contact-page{
+  position: relative;
+  .contact-section{
+    padding-bottom: 0;
+    .contact-info-container{
+      .map{
+        box-shadow:0 15px  30px rgba($gray-neutral, 0.2);
+        border: 1px solid rgba($gray-neutral, 0.2);
+      }
+      .info-row{
+        position: relative;
+        ul{
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px 0;
+          list-style-type: none;
+
+        }
+        .info-title{
+          display: inline-block;
+          text-transform: capitalize;
+          letter-spacing: unset;
+          @include family(text);
+          @include fs(20px);
+        }
+        .info{
+          @include fs(20px);
+          letter-spacing:unset;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  .sub-title{
+    position: relative;
+    z-index: 1;
+    color: $bluish-gray;
+    text-transform: capitalize;
+    @include family(title);
+    @include fs(35px);
+    font-weight: bold;
+  }
+  .letter-container{
+    background-color: white;
+    box-shadow:0 15px  30px rgba($gray-neutral, 0.2);
+    border: 1px solid rgba($gray-neutral, 0.2);
+    padding: 30px 90px;
+  }
+  .contact-form{
+    .input-class{
+      position: relative;
+      padding-bottom: 30px;
+    }
+    input{
+      border-bottom: 1px solid $bluish-gray;
+      width: 100%;
+      height: 40px;
+      @include family(text);
+      @include fs(18px);
+      color: $bluish-gray ;
+    }
+    label{
+      display: block;
+      @include family(text);
+      @include fs(18px);
+      color: $bluish-gray ;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    textarea{
+      width: 100%;
+      border: 1px solid $bluish-gray;
+      resize: none;
+      min-height: 200px;
+      @include family(text);
+      @include fs(16px);
+      color: $bluish-gray ;
+      padding: 10px;
+    }
+    .button-container{
+      text-align: center;
+      padding-top: 20px;
+      .button{
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .spike-line{
+    pointer-events: none;
+    display: flex;
+    width: 100%;
+    margin-top: -100px;
+    justify-content: space-between;
+    transform: translateY(2px);
+    .spike-container{
+      &.left-spikes{
+        width: 100%;
+        max-width: 380px;
+      }
+    }
+  }
+
+}
